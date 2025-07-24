@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 
 load_dotenv()
-genai.configure(api_key=os.getenv("AIzaSyCDbTO7aFtyuq6dS9futfvlcQ-d6DGjlpM"))
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 async def analyze_sector(sector: str, data: str) -> str:
     model = genai.GenerativeModel(model_name="models/gemini-2.5-pro")
     date = datetime.today().strftime("%B %d, %Y")
